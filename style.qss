@@ -1,0 +1,167 @@
+/* style.qss */
+
+QWidget {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+QMainWindow, QDialog {
+    background-color: #2c3e50;
+}
+
+/* --- Стили для Drag and Drop --- */
+QMainWindow[draggedOver="true"] #centralWidget {
+    border: 3px dashed #1abc9c;
+}
+
+/* --- Вкладки --- */
+QTabWidget::pane {
+    border: 1px solid #34495e;
+    border-top: none;
+    margin: 0px;
+    padding: 10px;
+}
+
+QTabBar::tab {
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 12px 20px;
+    margin-right: 2px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 120px;
+}
+
+QTabBar::tab:selected {
+    background-color: #1abc9c;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #4e6a85;
+}
+
+/* --- Кнопки --- */
+QPushButton {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:disabled {
+    background-color: #566573;
+    color: #95a5a6;
+}
+
+QPushButton#btn_delete, QPushButton#cancel_button_img, QPushButton#cancel_button_vid {
+    background-color: #e74c3c;
+}
+QPushButton#btn_delete:hover, QPushButton#cancel_button_img:hover, QPushButton#cancel_button_vid:hover {
+    background-color: #c0392b;
+}
+
+
+/* --- Поля ввода --- */
+QLineEdit {
+    background-color: #34495e;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+}
+
+/* --- Выпадающие списки --- */
+QComboBox {
+    background-color: #34495e;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #2c3e50;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(resources/down_arrow.png); /* Создайте иконку или удалите эту строку */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #34495e;
+    selection-background-color: #1abc9c;
+    color: #ecf0f1;
+}
+
+/* --- Слайдеры --- */
+QSlider::groove:horizontal {
+    border: 1px solid #34495e;
+    height: 8px;
+    background: #34495e;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #1abc9c;
+    border: 1px solid #1abc9c;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+
+/* --- Progress Bar --- */
+QProgressBar {
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+QProgressBar::chunk {
+    background-color: #1abc9c;
+    border-radius: 4px;
+}
+
+/* --- Labels --- */
+QLabel {
+    background-color: transparent;
+}
+
+QLabel#label_watermark_img, QLabel#label_watermark_vid, QLabel#about_title_label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+QLabel#preview_label_placeholder {
+    font-size: 16px;
+    color: #95a5a6;
+    border: 2px dashed #34495e;
+    border-radius: 5px;
+}
+
+/* --- Область с миниатюрами --- */
+QScrollArea {
+    border: 1px solid #34495e;
+    border-radius: 5px;
+}
+
+/* --- Видео виджет --- */
+QVideoWidget, CustomVideoWidget {
+    border: 2px solid #34495e;
+    border-radius: 5px;
+    background-color: #212f3c;
+}
