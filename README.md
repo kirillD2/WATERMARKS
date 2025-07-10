@@ -93,6 +93,10 @@ utils.py
 style.qss
 Управляет стилями: тёмная тема, цвета, кнопки, шрифты, акцентные элементы.
 
+
+<img width="1251" height="908" alt="image" src="https://github.com/user-attachments/assets/5a0c43f3-bade-4074-b888-7911d3f2094f" />
+
+
 Требования
 Python 3.8+
 
